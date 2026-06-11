@@ -69,7 +69,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:50;height:74px;display:flex;alig
     margin-bottom:32px;
 }
 .hero-title{font-family:'Playfair Display',serif;font-size:clamp(64px,8.2vw,126px);font-weight:500;line-height:.92;letter-spacing:-.055em;margin-bottom:16px;max-width:780px }
-.hero-title em{display:block;font-style:italic;font-weight:400;letter-spacing:-.06em;line-height:1.03}
+.hero-title em{display:block;font-style:normal;font-weight:400;letter-spacing:-.06em;line-height:1.03}
 .hero-title em + em{margin-top:.02em}
 .hero-name{width:fit-content;margin-bottom:24px;padding-bottom:7px;border-bottom:1px solid var(--rose);font-family:'Playfair Display',serif;font-size:clamp(20px,1.7vw,28px);font-style:italic;color:var(--green);letter-spacing:.01em}
 .hero-sub{max-width:560px;color:var(--muted);font-size:clamp(16px,1.15vw,19px);line-height:1.85;margin-bottom:34px}
@@ -101,33 +101,164 @@ nav{position:fixed;top:0;left:0;right:0;z-index:50;height:74px;display:flex;alig
 .skill-item p:last-child{font-size:14px;color:var(--muted);line-height:1.75}
 
 /* SELECTED WORK */
-.home-projects{background:var(--paper);padding:clamp(76px,8vw,126px) clamp(24px,5vw,78px);border-bottom:1px solid var(--line)}
-.section-header{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:58px}
-.section-title{font-family:'Playfair Display',serif;font-size:clamp(48px,7vw,104px);font-weight:400;line-height:.96;letter-spacing:-.045em}
-.section-title em{font-style:italic;color:var(--green)}
-.projects-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;align-items:stretch}
-.project-card{position:relative;min-height:410px;background:var(--cream);border:1px solid var(--line);overflow:hidden;cursor:pointer;transition:.35s}
-.project-card:nth-child(1){grid-column:span 2}
-.project-card:nth-child(2){grid-column:span 2}
-.project-card:nth-child(3){grid-column:span 2}
-.project-card:nth-child(4){grid-column:2 / span 2}
-.project-card:nth-child(5){grid-column:4 / span 2}
-.project-img-bg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:clamp(58px,7vw,110px);font-style:italic;color:rgba(5,5,13,.13);transition:.45s}
-.project-card:nth-child(1) .project-img-bg{background:linear-gradient(135deg,#E8E3DB,#C9B8AB)}
-.project-card:nth-child(2) .project-img-bg{background:linear-gradient(135deg,#35453B,#202A24);color:rgba(251,250,247,.16)}
-.project-card:nth-child(3) .project-img-bg{background:linear-gradient(135deg,#111,#3E3D38);color:rgba(251,250,247,.16)}
-.project-card:nth-child(4) .project-img-bg{background:linear-gradient(135deg,#CDADA2,#E7DED7)}
-.project-card:nth-child(5) .project-img-bg{background:linear-gradient(135deg,#35453B 30%,#CDADA2);color:rgba(251,250,247,.18)}
-.project-bottom-label{position:absolute;left:24px;right:24px;bottom:22px;display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
-.project-number{font-size:12px;letter-spacing:.16em;color:rgba(5,5,13,.38);font-weight:700}
-.project-role-tag{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(5,5,13,.45);font-weight:700;text-align:right}
-.project-overlay{position:absolute;inset:0;background:rgba(5,5,13,.78);color:var(--paper);display:flex;flex-direction:column;justify-content:flex-end;padding:36px;opacity:0;transition:.35s}
-.project-card:hover{transform:translateY(-4px)}
-.project-card:hover .project-overlay{opacity:1}
-.project-card:hover .project-img-bg{transform:scale(1.04)}
-.project-tag{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--rose);font-weight:700;margin-bottom:12px}
-.project-name{font-family:'Playfair Display',serif;font-size:30px;font-style:italic;font-weight:400;line-height:1.1;margin-bottom:12px}
-.project-desc{font-size:13px;color:rgba(251,250,247,.65);line-height:1.8}
+.home-projects{
+  background:var(--paper);
+  padding:clamp(76px,8vw,126px) clamp(24px,5vw,78px);
+  border-bottom:1px solid var(--line);
+}
+
+.section-header{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:28px;
+  margin-bottom:58px;
+}
+
+.section-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(48px,7vw,104px);
+  font-weight:400;
+  line-height:.96;
+  letter-spacing:-.045em;
+}
+
+.section-title em{
+  font-style:italic;
+  color:var(--green);
+}
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.project-card{
+  position:relative;
+  min-height:410px;
+  background:var(--cream);
+  border:1px solid var(--line);
+  overflow:hidden;
+  cursor:pointer;
+  transition:.35s;
+}
+
+.project-img-bg{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Playfair Display',serif;
+  font-size:clamp(58px,7vw,110px);
+  font-style:italic;
+  color:rgba(5,5,13,.13);
+  transition:.45s;
+}
+
+.project-card:nth-child(1) .project-img-bg{
+  background:linear-gradient(135deg,#E8E3DB,#C9B8AB);
+}
+
+.project-card:nth-child(2) .project-img-bg{
+  background:linear-gradient(135deg,#35453B,#202A24);
+  color:rgba(251,250,247,.16);
+}
+
+.project-card:nth-child(3) .project-img-bg{
+  background:linear-gradient(135deg,#111,#3E3D38);
+  color:rgba(251,250,247,.16);
+}
+
+.project-card:nth-child(4) .project-img-bg{
+  background:linear-gradient(135deg,#CDADA2,#E7DED7);
+}
+
+.project-card:nth-child(5) .project-img-bg{
+  background:linear-gradient(135deg,#35453B 30%,#CDADA2);
+  color:rgba(251,250,247,.18);
+}
+
+.project-card:nth-child(6) .project-img-bg{
+  background:linear-gradient(135deg,#F5F1EA,#BFB5A8);
+}
+
+.project-bottom-label{
+  position:absolute;
+  left:24px;
+  right:24px;
+  bottom:22px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.project-number{
+  font-size:12px;
+  letter-spacing:.16em;
+  color:rgba(5,5,13,.38);
+  font-weight:700;
+}
+
+.project-role-tag{
+  font-size:10px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:rgba(5,5,13,.45);
+  font-weight:700;
+  text-align:right;
+}
+
+.project-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(5,5,13,.78);
+  color:var(--paper);
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:36px;
+  opacity:0;
+  transition:.35s;
+}
+
+.project-card:hover{
+  transform:translateY(-4px);
+}
+
+.project-card:hover .project-overlay{
+  opacity:1;
+}
+
+.project-card:hover .project-img-bg{
+  transform:scale(1.04);
+}
+
+.project-tag{
+  font-size:10px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--rose);
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+.project-name{
+  font-family:'Playfair Display',serif;
+  font-size:30px;
+  font-style:italic;
+  font-weight:400;
+  line-height:1.1;
+  margin-bottom:12px;
+}
+
+.project-desc{
+  font-size:13px;
+  color:rgba(251,250,247,.65);
+  line-height:1.8;
+}
 
 /* HOME CONTACT */
 .home-contact{display:grid;grid-template-columns:1fr 1fr;background:var(--ink);color:var(--paper);gap:70px}
@@ -389,8 +520,9 @@ label,
       <div class="project-card" onclick="showProjectDetail('project-ti')"><div class="project-img-bg">TI</div><div class="project-bottom-label"><span class="project-number">01</span><span class="project-role-tag">Marketing</span></div><div class="project-overlay"><p class="project-tag">Marketing Campaign</p><h3 class="project-name">Texas Instruments</h3><p class="project-desc">Repositioning a legacy tech brand through creative campaign design for a music-learning app.</p></div></div>
       <div class="project-card" onclick="showProjectDetail('project-odc')"><div class="project-img-bg">ODC</div><div class="project-bottom-label"><span class="project-number">02</span><span class="project-role-tag">Editorial</span></div><div class="project-overlay"><p class="project-tag">Editorial Design</p><h3 class="project-name">Ottawa Design Club</h3><p class="project-desc">An editorial zine exploring Metamorphosis, built around Ottawa Design Club's visual identity.</p></div></div>
       <div class="project-card" onclick="showProjectDetail('project-rio')"><div class="project-img-bg">RJ</div><div class="project-bottom-label"><span class="project-number">03</span><span class="project-role-tag">Print</span></div><div class="project-overlay"><p class="project-tag">Graphic / Editorial</p><h3 class="project-name">Rio de Janeiro Brochure</h3><p class="project-desc">A vibrant, minimal trifold tourism brochure balancing Rio's energy with editorial restraint.</p></div></div>
-      <div class="project-card" onclick="showProjectDetail('project-prada')"><div class="project-img-bg">DWP</div><div class="project-bottom-label"><span class="project-number">04</span><span class="project-role-tag">Type / Brand</span></div><div class="project-overlay"><p class="project-tag">Type + Brand Design</p><h3 class="project-name">Devil Wears Prada</h3><p class="project-desc">A high-fashion promotional campaign with a custom typeface, poster redesign, and branded materials.</p></div></div>
+      <div class="project-card" onclick="showProjectDetail('project-prada')"><div class="project-img-bg">TDWP</div><div class="project-bottom-label"><span class="project-number">04</span><span class="project-role-tag">Type / Brand</span></div><div class="project-overlay"><p class="project-tag">Type + Brand Design</p><h3 class="project-name">The Devil Wears Prada</h3><p class="project-desc">A high-fashion promotional campaign with a custom typeface, poster redesign, and branded materials.</p></div></div>
       <div class="project-card" onclick="showProjectDetail('project-brasilidade')"><div class="project-img-bg">B</div><div class="project-bottom-label"><span class="project-number">05</span><span class="project-role-tag">Coming Soon</span></div><div class="project-overlay"><p class="project-tag">Branding · In Progress</p><h3 class="project-name">Brasilidade</h3><p class="project-desc">A Brazilian-inspired curly hair care brand exploring cultural identity through packaging and campaign design.</p></div></div>
+      <div class="project-card" onclick="showProjectDetail('project-timeless')"><div class="project-img-bg">T</div><div class="project-bottom-label"><span class="project-number">06</span><span class="project-role-tag">Coming Soon</span></div><div class="project-overlay"><p class="project-tag">Editorial Design· In Progress</p><h3 class="project-name">Timeless</h3><p class="project-desc">A fashion-focused editorial zine developed from concept to publication,exploring contemporary luxury, style, and visual storytelling.</p></div></div>
     </div>
   </section>
 
@@ -435,16 +567,70 @@ label,
 <div id="projects" class="page">
   <section class="projects-page-hero"><div><p class="eyebrow">Selected Work</p><h1 class="page-title">Projects</h1></div><p>A collection of marketing, editorial, and brand design projects — each one built around a clear strategy and a strong visual point of view.</p></section>
   <div class="projects-full-list">
-    <div class="project-row" onclick="toggleProject('p1')"><span class="project-num">01</span><div><h3 class="project-row-title">Texas Instruments Marketing Campaign</h3><p class="project-row-sub">Poster, landing page, web banners, and social media content for TI SyncPlay</p></div><span class="project-row-role">Marketing Campaign</span><span class="project-row-tools">Illustrator · Photoshop · InDesign</span></div>
+    <div class="project-row" onclick="toggleProject('p1')"><span class="project-num">01</span><div><h3 class="project-row-title">Texas Instruments — Marketing Campaign</h3><p class="project-row-sub">Poster, landing page, web banners, and social media content for TI SyncPlay</p></div><span class="project-row-role">Marketing Campaign</span><span class="project-row-tools">Illustrator · Photoshop · InDesign</span></div>
     <div id="p1" class="project-expanded"><div><p class="exp-label">Overview</p><p>A poster, landing page, web banner advertisement and social media content for the Texas Instruments music-learning app, TI SyncPlay.</p><p class="exp-heading">Goal</p><p>Reposition Texas Instruments as a creative, consumer-friendly brand beyond engineering and calculators.</p></div><div><p class="exp-heading">Strategy</p><p>Centered the campaign around the slogan “Don't just listen to music. Play it.” — turning music learning into an interactive, emotional experience.</p><button class="link-arrow learn-more-btn" onclick="event.stopPropagation(); showProjectDetail('project-ti')">Learn More →</button><br><button class="close-btn" onclick="toggleProject('p1')">Close</button></div></div>
-    <div class="project-row" onclick="toggleProject('p2')"><span class="project-num">02</span><div><h3 class="project-row-title">Ottawa Design Club Editorial Zine</h3><p class="project-row-sub">An editorial zine exploring Metamorphosis</p></div><span class="project-row-role">Editorial Design</span><span class="project-row-tools">InDesign · Illustrator · Photoshop</span></div>
+    <div class="project-row" onclick="toggleProject('p2')"><span class="project-num">02</span><div><h3 class="project-row-title">Ottawa Design Club — Editorial Zine</h3><p class="project-row-sub">An editorial zine exploring Metamorphosis</p></div><span class="project-row-role">Editorial Design</span><span class="project-row-tools">InDesign · Illustrator · Photoshop</span></div>
     <div id="p2" class="project-expanded"><div><p class="exp-label">Overview</p><p>An editorial zine inspired by Ottawa Design Club and centered around transformation as an ongoing creative process.</p><p class="exp-heading">Goal</p><p>Understand how an existing editorial brand communicates visually and recreate that feeling through typography, layout, pacing, and storytelling.</p></div><div><p class="exp-heading">Strategy</p><p>Studied typography systems, grid structures, image placement, white space, hierarchy, and color usage to build a consistent editorial experience.</p><button class="link-arrow learn-more-btn" onclick="event.stopPropagation(); showProjectDetail('project-odc')">Learn More →</button><br><button class="close-btn" onclick="toggleProject('p2')">Close</button></div></div>
-    <div class="project-row" onclick="toggleProject('p3')"><span class="project-num">03</span><div><h3 class="project-row-title">Rio de Janeiro Tourism Brochure</h3><p class="project-row-sub">A vibrant, minimal trifold pamphlet for international travelers</p></div><span class="project-row-role">Graphic / Editorial</span><span class="project-row-tools">Illustrator · Photoshop · InDesign</span></div>
+    <div class="project-row" onclick="toggleProject('p3')"><span class="project-num">03</span><div><h3 class="project-row-title">Rio de Janeiro — Tourism Brochure</h3><p class="project-row-sub">A vibrant, minimal trifold pamphlet for international travelers</p></div><span class="project-row-role">Graphic / Editorial</span><span class="project-row-tools">Illustrator · Photoshop · InDesign</span></div>
     <div id="p3" class="project-expanded"><div><p class="exp-label">Overview</p><p>A vibrant, minimal trifold pamphlet promoting tourism in Rio de Janeiro.</p><p class="exp-heading">Goal</p><p>Create a tourism brochure that felt visually engaging, modern, and authentic to Rio's identity.</p></div><div><p class="exp-heading">Strategy</p><p>Combined minimal editorial layouts with vibrant imagery and authentic branding elements from Rio's official style guide.</p><button class="link-arrow learn-more-btn" onclick="event.stopPropagation(); showProjectDetail('project-rio')">Learn More →</button><br><button class="close-btn" onclick="toggleProject('p3')">Close</button></div></div>
     <div class="project-row" onclick="toggleProject('p4')"><span class="project-num">04</span><div><h3 class="project-row-title">The Devil Wears Prada — Promotional Materials</h3><p class="project-row-sub">Custom typeface, poster redesign, ticket, pamphlet, and paper bag</p></div><span class="project-row-role">Type + Brand Design</span><span class="project-row-tools">Illustrator · Photoshop</span></div>
     <div id="p4" class="project-expanded"><div><p class="exp-label">Overview</p><p>A redesign of the iconic movie poster with a custom typeface and cohesive promotional materials.</p><p class="exp-heading">Goal</p><p>Create a high-fashion promotional campaign using typography as the primary branding tool.</p></div><div><p class="exp-heading">Strategy</p><p>Approached the project as a luxury fashion campaign, using editorial elegance, subtle drama, and strong visual recognition.</p><button class="link-arrow learn-more-btn" onclick="event.stopPropagation(); showProjectDetail('project-prada')">Learn More →</button><br><button class="close-btn" onclick="toggleProject('p4')">Close</button></div></div>
     <div class="project-row" onclick="toggleProject('p5')"><span class="project-num">05</span><div><h3 class="project-row-title">Brasilidade — Brand Identity</h3><p class="project-row-sub">Brazilian-inspired curly hair care brand · In Development</p></div><span class="project-row-role">Coming Soon</span><span class="project-row-tools">Illustrator · Photoshop · InDesign</span></div>
     <div id="p5" class="project-expanded"><div><p class="exp-label">In Development</p><p>Brasilidade is an upcoming branding and marketing project centered around a Brazilian-inspired curly hair care brand.</p><p class="exp-heading">Concept</p><p>Inspired by my experience as a Brazilian living in Canada and navigating curly hair care between both cultures.</p></div><div><p class="exp-heading">Scope</p><p>Brand identity design · Packaging design · Marketing campaign development · Social media visuals · Art direction · Creative strategy.</p><button class="link-arrow learn-more-btn" onclick="event.stopPropagation(); showProjectDetail('project-brasilidade')">Learn More →</button><br><button class="close-btn" onclick="toggleProject('p5')">Close</button></div></div>
+    <div class="project-row" onclick="toggleProject('p6')">
+  <span class="project-num">06</span>
+  <div>
+    <h3 class="project-row-title">Timeless — Fashion Zine</h3>
+    <p class="project-row-sub">
+      Editorial publication · In Development
+    </p>
+  </div>
+
+  <span class="project-row-role">Coming Soon</span>
+
+  <span class="project-row-tools">
+    InDesign · Photoshop · Illustrator
+  </span>
+</div>
+
+<div id="p6" class="project-expanded">
+  <div>
+    <p class="exp-label">In Development</p>
+
+    <p>
+      Timeless is an original fashion and lifestyle editorial publication
+      currently being developed from scratch.
+    </p>
+
+    <p class="exp-heading">Concept</p>
+
+    <p>
+      Exploring the idea of modern luxury through fashion, culture,
+      craftsmanship, and timeless style.
+    </p>
+  </div>
+
+  <div>
+    <p class="exp-heading">Scope</p>
+
+    <p>
+      Editorial design · Art direction · Typography systems · Layout design ·
+      Magazine structure · Cover design.
+    </p>
+
+    <button
+      class="link-arrow learn-more-btn"
+      onclick="event.stopPropagation(); showProjectDetail('project-timeless')">
+      Learn More →
+    </button>
+
+    <br>
+
+    <button class="close-btn" onclick="toggleProject('p6')">
+      Close
+    </button>
+  </div>
+</div>
   </div>
   <footer><p>Giulia Guerini</p><p>© 2026 Giulia de Almada Guerini</p><button class="link-arrow" onclick="showPage('contact')">Get In Touch →</button></footer>
 </div>
@@ -460,6 +646,7 @@ label,
   <section class="project-detail-body"><div><p class="eyebrow">Project Description</p><h2>Turning precision into creativity.</h2></div><div><p>The campaign expands Texas Instruments beyond its familiar association with calculators and engineering by presenting the brand as a tool for learning, creativity, and self-expression.</p><p>The visual system was built around the slogan “Don't just listen to music. Play it.” The goal was to make the app feel approachable while still maintaining the precision and trust associated with TI.</p><ul class="project-detail-list"><li>Built a flexible campaign system across print and digital touchpoints.</li><li>Used strong typographic hierarchy to make the message direct and memorable.</li><li>Balanced technology, music, and accessibility through clean visual direction.</li></ul></div></section>
   <section class="project-detail-gallery"><div class="gallery-panel">Poster</div><div class="gallery-panel">Landing Page</div><div class="gallery-panel">Social</div><div class="gallery-panel">Banner</div></section>
   <section class="project-detail-nav"><button class="link-arrow" onclick="showPage('projects')">← Back to Projects</button><button class="link-arrow" onclick="showProjectDetail('project-odc')">Next Project →</button></section>
+  <footer><p>Giulia Guerini</p><p>© 2026 Giulia de Almada Guerini</p><p>Toronto, Canada</p></footer>
 </div>
 
 <div id="project-odc" class="page project-detail-page">
@@ -472,6 +659,7 @@ label,
   <section class="project-detail-body"><div><p class="eyebrow">Project Description</p><h2>A study in transformation.</h2></div><div><p>This project focused on understanding an existing editorial identity and translating its structure into a new issue concept. The theme, Metamorphosis, guided the pacing, imagery, and visual rhythm.</p><p>The design uses strong hierarchy, intentional white space, and carefully controlled layouts to create an editorial experience that feels cohesive while allowing each artist profile to have its own visual tone.</p><ul class="project-detail-list"><li>Designed a full editorial system inspired by an existing publication style.</li><li>Created layout variation while maintaining consistent visual rules.</li><li>Explored how typography can create pace, hierarchy, and mood.</li></ul></div></section>
   <section class="project-detail-gallery"><div class="gallery-panel">Cover</div><div class="gallery-panel">Spread</div><div class="gallery-panel">Profile</div><div class="gallery-panel">Details</div></section>
   <section class="project-detail-nav"><button class="link-arrow" onclick="showPage('projects')">← Back to Projects</button><button class="link-arrow" onclick="showProjectDetail('project-rio')">Next Project →</button></section>
+  <footer><p>Giulia Guerini</p><p>© 2026 Giulia de Almada Guerini</p><p>Toronto, Canada</p></footer>
 </div>
 
 <div id="project-rio" class="page project-detail-page">
@@ -484,6 +672,7 @@ label,
   <section class="project-detail-body"><div><p class="eyebrow">Project Description</p><h2>Vibrant, minimal, and easy to navigate.</h2></div><div><p>The brochure was created to present Rio de Janeiro as energetic and welcoming without overwhelming the reader. The layout uses bright visual moments, clean spacing, and structured content to guide travelers through the city experience.</p><p>Using Rio's visual references and tourism tone, the design balances excitement with clarity, making the brochure feel both useful and visually engaging.</p><ul class="project-detail-list"><li>Structured information clearly within a compact trifold format.</li><li>Used color and image pacing to capture Rio's atmosphere.</li><li>Created a polished print piece for a travel-focused audience.</li></ul></div></section>
   <section class="project-detail-gallery"><div class="gallery-panel">Front</div><div class="gallery-panel">Inside</div><div class="gallery-panel">Map</div><div class="gallery-panel">Details</div></section>
   <section class="project-detail-nav"><button class="link-arrow" onclick="showPage('projects')">← Back to Projects</button><button class="link-arrow" onclick="showProjectDetail('project-prada')">Next Project →</button></section>
+  <footer><p>Giulia Guerini</p><p>© 2026 Giulia de Almada Guerini</p><p>Toronto, Canada</p></footer>
 </div>
 
 <div id="project-prada" class="page project-detail-page">
@@ -496,6 +685,7 @@ label,
   <section class="project-detail-body"><div><p class="eyebrow">Project Description</p><h2>Typography as fashion language.</h2></div><div><p>This project reimagines promotional materials for The Devil Wears Prada through the lens of luxury fashion branding. The custom typeface became the core visual device, giving the campaign a distinct editorial personality.</p><p>The system uses dramatic scale, sharp forms, and refined composition to create a tone that feels elegant, recognizable, and connected to the film's fashion world.</p><ul class="project-detail-list"><li>Developed a custom typeface inspired by high-fashion editorial references.</li><li>Created a cohesive set of promotional materials.</li><li>Used typography as the main driver of brand recognition.</li></ul></div></section>
   <section class="project-detail-gallery"><div class="gallery-panel">Type</div><div class="gallery-panel">Poster</div><div class="gallery-panel">Ticket</div><div class="gallery-panel">Bag</div></section>
   <section class="project-detail-nav"><button class="link-arrow" onclick="showPage('projects')">← Back to Projects</button><button class="link-arrow" onclick="showProjectDetail('project-brasilidade')">Next Project →</button></section>
+  <footer><p>Giulia Guerini</p><p>© 2026 Giulia de Almada Guerini</p><p>Toronto, Canada</p></footer>
 </div>
 
 <div id="project-brasilidade" class="page project-detail-page">
@@ -507,7 +697,30 @@ label,
   <section class="project-detail-image green"><span>Brasil</span></section>
   <section class="project-detail-body"><div><p class="eyebrow">Project Description</p><h2>A brand rooted in Brazilian beauty and identity.</h2></div><div><p>Brasilidade is being developed as a curly hair care brand inspired by Brazilian culture, ingredients, and aesthetics. The project responds to the challenge of finding culturally resonant curly hair products in Canada.</p><p>The direction combines joyful tropical energy with a more premium editorial approach, creating a brand that feels warm, expressive, and refined.</p><ul class="project-detail-list"><li>Building a full identity system with packaging and digital applications.</li><li>Exploring Brazilian visual references through a premium beauty lens.</li><li>Creating a campaign that celebrates curl diversity and cultural visibility.</li></ul></div></section>
   <section class="project-detail-gallery"><div class="gallery-panel">Logo</div><div class="gallery-panel">Packaging</div><div class="gallery-panel">Social</div><div class="gallery-panel">Website</div></section>
-  <section class="project-detail-nav"><button class="link-arrow" onclick="showPage('projects')">← Back to Projects</button><button class="link-arrow" onclick="showProjectDetail('project-ti')">First Project →</button></section>
+  <section class="project-detail-nav"><button class="link-arrow" onclick="showPage('projects')">← Back to Projects</button><button class="link-arrow" onclick="showProjectDetail('project-ti')">Next Project →</button></section>
+  <footer><p>Giulia Guerini</p><p>© 2026 Giulia de Almada Guerini</p><p>Toronto, Canada</p></footer>
+</div>
+
+<div id="project-timeless" class="page project-detail-page">
+
+  <section class="project-detail-hero">
+
+    <div><p class="eyebrow">Editorial Design · In Progress</p><h1 class="project-detail-title">Timeless <em>Magazine</em></h1></div>
+
+    <p class="project-detail-intro">An editorial publication exploring fashion, craftsmanship, and the meaning of luxury in a contemporary world.</p>
+
+  </section>
+
+  <section class="project-detail-meta"><div class="meta-block"><p class="meta-label">Role</p><p class="meta-value">Editorial design, art direction, typography, layout systems</p></div><div class="meta-block"><p class="meta-label">Tools</p><p class="meta-value">InDesign · Photoshop · Illustrator</p></div><div class="meta-block"><p class="meta-label">Deliverables</p><p class="meta-value">Cover · Feature spreads · Editorial system · Magazine layout</p></div></section>
+
+  <section class="project-detail-image"><span>Timeless</span></section>
+
+  <section class="project-detail-body"><div><p class="eyebrow">Project Description</p><h2>Building a magazine from the ground up.</h2></div><div><p>Timeless is an original fashion editorial publication currently being developed from concept to completion.</p><p>The project explores contemporary luxury through fashion, craftsmanship, vintage culture, and visual storytelling, combining editorial structure with high-end magazine aesthetics.</p><ul class="project-detail-list"><li>Original editorial concept and publication structure.</li><li>Curated typography and custom layout systems.</li><li>Fashion-focused art direction and visual storytelling.</li></ul></div></section>
+
+  <section class="project-detail-gallery"><div class="gallery-panel">Cover</div><div class="gallery-panel">Feature</div><div class="gallery-panel">Spreads</div><div class="gallery-panel">Layout</div></section>
+
+  <section class="project-detail-nav"><button class="link-arrow" onclick="showPage('projects')">← Back to Projects</button><button class="link-arrow" onclick="showProjectDetail('project-ti')">Next Project →</button></section>
+  <footer><p>Giulia Guerini</p><p>© 2026 Giulia de Almada Guerini</p><p>Toronto, Canada</p></footer>
 </div>
 
 <div id="contact" class="page contact-page">
