@@ -160,6 +160,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:50;height:74px;display:flex;alig
   transition:.45s;
 }
 
+.project-card-image{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
 .project-card:nth-child(1) .project-img-bg{
   background:linear-gradient(135deg,#E8E3DB,#C9B8AB);
 }
@@ -519,11 +527,79 @@ label,
       <h2 class="section-title">Selected <em>Work</em></h2>
       <button class="link-arrow" onclick="showPage('projects')">All Projects →</button>
     </div>
+
     <div class="projects-grid">
-      <div class="project-card" onclick="showProjectDetail('project-ti')"><div class="project-img-bg">TI</div><div class="project-bottom-label"><span class="project-number">01</span><span class="project-role-tag">Marketing</span></div><div class="project-overlay"><p class="project-tag">Marketing Campaign</p><h3 class="project-name">Texas Instruments</h3><p class="project-desc">Repositioning a legacy tech brand through creative campaign design for a music-learning app.</p></div></div>
-      <div class="project-card" onclick="showProjectDetail('project-odc')"><div class="project-img-bg">ODC</div><div class="project-bottom-label"><span class="project-number">02</span><span class="project-role-tag">Editorial</span></div><div class="project-overlay"><p class="project-tag">Editorial Design</p><h3 class="project-name">Ottawa Design Club</h3><p class="project-desc">An editorial zine exploring Metamorphosis, built around Ottawa Design Club's visual identity.</p></div></div>
-      <div class="project-card" onclick="showProjectDetail('project-rio')"><div class="project-img-bg">RJ</div><div class="project-bottom-label"><span class="project-number">03</span><span class="project-role-tag">Print</span></div><div class="project-overlay"><p class="project-tag">Graphic / Editorial</p><h3 class="project-name">Rio de Janeiro Brochure</h3><p class="project-desc">A vibrant, minimal trifold tourism brochure balancing Rio's energy with editorial restraint.</p></div></div>
-      <div class="project-card" onclick="showProjectDetail('project-prada')"><div class="project-img-bg">TDWP</div><div class="project-bottom-label"><span class="project-number">04</span><span class="project-role-tag">Type / Brand</span></div><div class="project-overlay"><p class="project-tag">Type + Brand Design</p><h3 class="project-name">The Devil Wears Prada</h3><p class="project-desc">A high-fashion promotional campaign with a custom typeface, poster redesign, and branded materials.</p></div></div>
+      <div class="project-card" onclick="showProjectDetail('project-ti')">
+    <img class="project-card-image"
+         src="Images/ti-mockup-main.png"
+         alt="Texas Instruments Poster">
+
+    <div class="project-bottom-label">
+        <span class="project-number">01</span>
+        <span class="project-role-tag">Marketing</span>
+    </div>
+
+    <div class="project-overlay">
+        <p class="project-tag">Marketing Campaign</p>
+        <h3 class="project-name">Texas Instruments</h3>
+        <p class="project-desc">
+            Repositioning a legacy tech brand through creative campaign design for a music-learning app.
+        </p>
+    </div>
+</div>
+      <div class="project-card" onclick="showProjectDetail('project-odc')">
+      <img class="project-card-image"
+            src="Images/odc-mockup-main.png"
+            alt="Ottawa Design Club Zine">
+
+        <div class="project-bottom-label">
+            <span class="project-number">02</span>
+            <span class="project-role-tag">Editorial</span>
+        </div>
+
+        <div class="project-overlay">
+          <p class="project-tag">Editorial Design</p>
+          <h3 class="project-name">Ottawa Design Club</h3>
+          <p class="project-desc">
+            An editorial zine exploring Metamorphosis, built around Ottawa Design Club's visual identity.
+          </p></div>
+</div>
+      <div class="project-card" onclick="showProjectDetail('project-prada')">
+      <img class="project-card-image"
+            src="Images/prada-mockup-main.png"
+            alt="The Devil Wears Prada Poster">
+
+        <div class="project-bottom-label">
+          <span class="project-number">03</span>
+          <span class="project-role-tag">Type / Brand</span>
+        </div>
+        
+        <div class="project-overlay">
+          <p class="project-tag">Type + Brand Design</p>
+          <h3 class="project-name">The Devil Wears Prada</h3>
+          <p class="project-desc">
+            A high-fashion promotional campaign with a custom typeface, poster redesign, and branded materials.</p>
+          </div>
+</div>
+
+      <div class="project-card" onclick="showProjectDetail('project-rio')">
+        <img class="project-card-image" 
+          src="Images/rj-mockup-main.png"
+          alt="Rio de Janeiro Brochure"> 
+          
+        <div class="project-bottom-label">
+          <span class="project-number">04</span>
+          <span class="project-role-tag">Print</span>
+        </div>
+        
+        <div class="project-overlay">
+          <p class="project-tag">Graphic / Editorial</p>
+          <h3 class="project-name">Rio de Janeiro Brochure</h3>
+          <p class="project-desc">
+            A vibrant, minimal trifold tourism brochure balancing Rio's energy with editorial restraint.</p>
+        </div>
+</div>
+
       <div class="project-card" onclick="showProjectDetail('project-brasilidade')"><div class="project-img-bg">B</div><div class="project-bottom-label"><span class="project-number">05</span><span class="project-role-tag">Coming Soon</span></div><div class="project-overlay"><p class="project-tag">Branding · In Progress</p><h3 class="project-name">Brasilidade</h3><p class="project-desc">A Brazilian-inspired curly hair care brand exploring cultural identity through packaging and campaign design.</p></div></div>
       <div class="project-card" onclick="showProjectDetail('project-timeless')"><div class="project-img-bg">T</div><div class="project-bottom-label"><span class="project-number">06</span><span class="project-role-tag">Coming Soon</span></div><div class="project-overlay"><p class="project-tag">Editorial Design· In Progress</p><h3 class="project-name">Timeless</h3><p class="project-desc">A fashion-focused editorial zine developed from concept to publication,exploring contemporary luxury, style, and visual storytelling.</p></div></div>
     </div>
@@ -575,10 +651,10 @@ label,
     <div id="p1" class="project-expanded"><div><p class="exp-label">Overview</p><p>A poster, landing page, web banner advertisement and social media content for the Texas Instruments music-learning app, TI SyncPlay.</p><p class="exp-heading">Goal</p><p>Reposition Texas Instruments as a creative, consumer-friendly brand beyond engineering and calculators.</p></div><div><p class="exp-heading">Strategy</p><p>Centered the campaign around the slogan “Don't just listen to music. Play it.” — turning music learning into an interactive, emotional experience.</p><button class="link-arrow learn-more-btn" onclick="event.stopPropagation(); showProjectDetail('project-ti')">Learn More →</button><br><button class="close-btn" onclick="toggleProject('p1')">Close</button></div></div>
     <div class="project-row" onclick="toggleProject('p2')"><span class="project-num">02</span><div><h3 class="project-row-title">Ottawa Design Club — Editorial Zine</h3><p class="project-row-sub">An editorial zine exploring Metamorphosis</p></div><span class="project-row-role">Editorial Design</span><span class="project-row-tools">InDesign · Illustrator · Photoshop</span></div>
     <div id="p2" class="project-expanded"><div><p class="exp-label">Overview</p><p>An editorial zine inspired by Ottawa Design Club and centered around transformation as an ongoing creative process.</p><p class="exp-heading">Goal</p><p>Understand how an existing editorial brand communicates visually and recreate that feeling through typography, layout, pacing, and storytelling.</p></div><div><p class="exp-heading">Strategy</p><p>Studied typography systems, grid structures, image placement, white space, hierarchy, and color usage to build a consistent editorial experience.</p><button class="link-arrow learn-more-btn" onclick="event.stopPropagation(); showProjectDetail('project-odc')">Learn More →</button><br><button class="close-btn" onclick="toggleProject('p2')">Close</button></div></div>
-    <div class="project-row" onclick="toggleProject('p3')"><span class="project-num">03</span><div><h3 class="project-row-title">Rio de Janeiro — Tourism Brochure</h3><p class="project-row-sub">A vibrant, minimal trifold pamphlet for international travelers</p></div><span class="project-row-role">Graphic / Editorial</span><span class="project-row-tools">Illustrator · Photoshop · InDesign</span></div>
-    <div id="p3" class="project-expanded"><div><p class="exp-label">Overview</p><p>A vibrant, minimal trifold pamphlet promoting tourism in Rio de Janeiro.</p><p class="exp-heading">Goal</p><p>Create a tourism brochure that felt visually engaging, modern, and authentic to Rio's identity.</p></div><div><p class="exp-heading">Strategy</p><p>Combined minimal editorial layouts with vibrant imagery and authentic branding elements from Rio's official style guide.</p><button class="link-arrow learn-more-btn" onclick="event.stopPropagation(); showProjectDetail('project-rio')">Learn More →</button><br><button class="close-btn" onclick="toggleProject('p3')">Close</button></div></div>
-    <div class="project-row" onclick="toggleProject('p4')"><span class="project-num">04</span><div><h3 class="project-row-title">The Devil Wears Prada — Promotional Materials</h3><p class="project-row-sub">Custom typeface, poster redesign, ticket, pamphlet, and paper bag</p></div><span class="project-row-role">Type + Brand Design</span><span class="project-row-tools">Illustrator · Photoshop</span></div>
-    <div id="p4" class="project-expanded"><div><p class="exp-label">Overview</p><p>A redesign of the iconic movie poster with a custom typeface and cohesive promotional materials.</p><p class="exp-heading">Goal</p><p>Create a high-fashion promotional campaign using typography as the primary branding tool.</p></div><div><p class="exp-heading">Strategy</p><p>Approached the project as a luxury fashion campaign, using editorial elegance, subtle drama, and strong visual recognition.</p><button class="link-arrow learn-more-btn" onclick="event.stopPropagation(); showProjectDetail('project-prada')">Learn More →</button><br><button class="close-btn" onclick="toggleProject('p4')">Close</button></div></div>
+    <div class="project-row" onclick="toggleProject('p3')"><span class="project-num">03</span><div><h3 class="project-row-title">The Devil Wears Prada — Promotional Materials</h3><p class="project-row-sub">Custom typeface, poster redesign, ticket, pamphlet, and paper bag</p></div><span class="project-row-role">Type + Brand Design</span><span class="project-row-tools">Illustrator · Photoshop</span></div>
+    <div id="p3" class="project-expanded"><div><p class="exp-label">Overview</p><p>A redesign of the iconic movie poster with a custom typeface and cohesive promotional materials.</p><p class="exp-heading">Goal</p><p>Create a high-fashion promotional campaign using typography as the primary branding tool.</p></div><div><p class="exp-heading">Strategy</p><p>Approached the project as a luxury fashion campaign, using editorial elegance, subtle drama, and strong visual recognition.</p><button class="link-arrow learn-more-btn" onclick="event.stopPropagation(); showProjectDetail('project-prada')">Learn More →</button><br><button class="close-btn" onclick="toggleProject('p3')">Close</button></div></div>
+    <div class="project-row" onclick="toggleProject('p4')"><span class="project-num">04</span><div><h3 class="project-row-title">Rio de Janeiro — Tourism Brochure</h3><p class="project-row-sub">A vibrant, minimal trifold pamphlet for international travelers</p></div><span class="project-row-role">Graphic / Editorial</span><span class="project-row-tools">Illustrator · Photoshop · InDesign</span></div>
+    <div id="p4" class="project-expanded"><div><p class="exp-label">Overview</p><p>A vibrant, minimal trifold pamphlet promoting tourism in Rio de Janeiro.</p><p class="exp-heading">Goal</p><p>Create a tourism brochure that felt visually engaging, modern, and authentic to Rio's identity.</p></div><div><p class="exp-heading">Strategy</p><p>Combined minimal editorial layouts with vibrant imagery and authentic branding elements from Rio's official style guide.</p><button class="link-arrow learn-more-btn" onclick="event.stopPropagation(); showProjectDetail('project-rio')">Learn More →</button><br><button class="close-btn" onclick="toggleProject('p4')">Close</button></div></div>
     <div class="project-row" onclick="toggleProject('p5')"><span class="project-num">05</span><div><h3 class="project-row-title">Brasilidade — Brand Identity</h3><p class="project-row-sub">Brazilian-inspired curly hair care brand · In Development</p></div><span class="project-row-role">Coming Soon</span><span class="project-row-tools">Illustrator · Photoshop · InDesign</span></div>
     <div id="p5" class="project-expanded"><div><p class="exp-label">In Development</p><p>Brasilidade is an upcoming branding and marketing project centered around a Brazilian-inspired curly hair care brand.</p><p class="exp-heading">Concept</p><p>Inspired by my experience as a Brazilian living in Canada and navigating curly hair care between both cultures.</p></div><div><p class="exp-heading">Scope</p><p>Brand identity design · Packaging design · Marketing campaign development · Social media visuals · Art direction · Creative strategy.</p><button class="link-arrow learn-more-btn" onclick="event.stopPropagation(); showProjectDetail('project-brasilidade')">Learn More →</button><br><button class="close-btn" onclick="toggleProject('p5')">Close</button></div></div>
     <div class="project-row" onclick="toggleProject('p6')">
