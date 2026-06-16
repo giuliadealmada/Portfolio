@@ -350,6 +350,27 @@ nav{position:fixed;top:0;left:0;right:0;z-index:50;height:74px;display:flex;alig
 .project-detail-nav .link-arrow{color:var(--paper)}
 .learn-more-btn{margin-top:26px}
 
+.project-detail-main-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.gallery-panel{
+  border:1px solid var(--line);
+  background:var(--cream);
+  overflow:hidden;
+}
+
+.gallery-panel img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+
+
 @media(max-width:980px){
   .project-detail-hero,.project-detail-body{grid-template-columns:1fr}
   .project-detail-meta{grid-template-columns:1fr}
@@ -722,9 +743,32 @@ label,
     <p class="project-detail-intro">A campaign concept repositioning Texas Instruments as a creative, consumer-friendly brand through a music-learning app that helps users play along in real time.</p>
   </section>
   <section class="project-detail-meta"><div class="meta-block"><p class="meta-label">Role</p><p class="meta-value">Concept development, art direction, campaign design, layout design</p></div><div class="meta-block"><p class="meta-label">Tools</p><p class="meta-value">Illustrator · Photoshop · InDesign</p></div><div class="meta-block"><p class="meta-label">Deliverables</p><p class="meta-value">Poster · Landing page · Web banner · Social media posts</p></div></section>
-  <section class="project-detail-image dark"><span>TI</span></section>
+  <section class="project-detail-image">
+  <img
+    class="project-detail-main-image"
+    src="Images/ti-mockup-main.png"
+    alt="Texas Instruments Poster Mockup">
+</section>
   <section class="project-detail-body"><div><p class="eyebrow">Project Description</p><h2>Turning precision into creativity.</h2></div><div><p>The campaign expands Texas Instruments beyond its familiar association with calculators and engineering by presenting the brand as a tool for learning, creativity, and self-expression.</p><p>The visual system was built around the slogan “Don't just listen to music. Play it.” The goal was to make the app feel approachable while still maintaining the precision and trust associated with TI.</p><ul class="project-detail-list"><li>Built a flexible campaign system across print and digital touchpoints.</li><li>Used strong typographic hierarchy to make the message direct and memorable.</li><li>Balanced technology, music, and accessibility through clean visual direction.</li></ul></div></section>
-  <section class="project-detail-gallery"><div class="gallery-panel">Poster</div><div class="gallery-panel">Landing Page</div><div class="gallery-panel">Social</div><div class="gallery-panel">Banner</div></section>
+  <section class="project-detail-gallery">
+
+  <div class="gallery-panel">
+    <img src="Images/ti-poster.png" alt="TI Poster">
+  </div>
+
+  <div class="gallery-panel">
+    <img src="Images/ti-landing-page.png" alt="TI Landing Page">
+  </div>
+
+  <div class="gallery-panel">
+    <img src="Images/ti-social.png" alt="TI Social Media">
+  </div>
+
+  <div class="gallery-panel">
+    <img src="Images/ti-banner.png" alt="TI Web Banner">
+  </div>
+
+</section>
   <section class="project-detail-nav"><button class="link-arrow" onclick="showPage('projects')">← Back to Projects</button><button class="link-arrow" onclick="showProjectDetail('project-odc')">Next Project →</button></section>
   <footer><p>Giulia Guerini</p><p>© 2026 Giulia de Almada Guerini</p><p>Toronto, Canada</p></footer>
 </div>
@@ -735,7 +779,12 @@ label,
     <p class="project-detail-intro">An editorial zine exploring the theme of Metamorphosis while studying and responding to the visual language of Ottawa Design Club.</p>
   </section>
   <section class="project-detail-meta"><div class="meta-block"><p class="meta-label">Role</p><p class="meta-value">Editorial design, layout systems, typography, visual research</p></div><div class="meta-block"><p class="meta-label">Tools</p><p class="meta-value">InDesign · Illustrator · Photoshop</p></div><div class="meta-block"><p class="meta-label">Deliverables</p><p class="meta-value">Full zine · Cover · Artist profiles · Editorial spreads</p></div></section>
-  <section class="project-detail-image green"><span>ODC</span></section>
+  <section class="project-detail-image">
+  <img
+    class="project-detail-main-image"
+    src="Images/odc-mockup-main.png"
+    alt="Ottawa Design Club Zine">
+</section>
   <section class="project-detail-body"><div><p class="eyebrow">Project Description</p><h2>A study in transformation.</h2></div><div><p>This project focused on understanding an existing editorial identity and translating its structure into a new issue concept. The theme, Metamorphosis, guided the pacing, imagery, and visual rhythm.</p><p>The design uses strong hierarchy, intentional white space, and carefully controlled layouts to create an editorial experience that feels cohesive while allowing each artist profile to have its own visual tone.</p><ul class="project-detail-list"><li>Designed a full editorial system inspired by an existing publication style.</li><li>Created layout variation while maintaining consistent visual rules.</li><li>Explored how typography can create pace, hierarchy, and mood.</li></ul></div></section>
   <section class="project-detail-gallery"><div class="gallery-panel">Cover</div><div class="gallery-panel">Spread</div><div class="gallery-panel">Profile</div><div class="gallery-panel">Details</div></section>
   <section class="project-detail-nav"><button class="link-arrow" onclick="showPage('projects')">← Back to Projects</button><button class="link-arrow" onclick="showProjectDetail('project-rio')">Next Project →</button></section>
@@ -748,7 +797,12 @@ label,
     <p class="project-detail-intro">A trifold tourism brochure designed for international travelers, balancing vibrant cultural energy with a clean editorial structure.</p>
   </section>
   <section class="project-detail-meta"><div class="meta-block"><p class="meta-label">Role</p><p class="meta-value">Print design, layout, art direction, image selection</p></div><div class="meta-block"><p class="meta-label">Tools</p><p class="meta-value">Illustrator · Photoshop · InDesign</p></div><div class="meta-block"><p class="meta-label">Deliverables</p><p class="meta-value">Trifold brochure · Cover · Interior panels</p></div></section>
-  <section class="project-detail-image rose"><span>Rio</span></section>
+  <section class="project-detail-image">
+  <img
+    class="project-detail-main-image"
+    src="Images/rj-mockup-main.png"
+    alt="Rio de Janeiro Brochure">
+</section>
   <section class="project-detail-body"><div><p class="eyebrow">Project Description</p><h2>Vibrant, minimal, and easy to navigate.</h2></div><div><p>The brochure was created to present Rio de Janeiro as energetic and welcoming without overwhelming the reader. The layout uses bright visual moments, clean spacing, and structured content to guide travelers through the city experience.</p><p>Using Rio's visual references and tourism tone, the design balances excitement with clarity, making the brochure feel both useful and visually engaging.</p><ul class="project-detail-list"><li>Structured information clearly within a compact trifold format.</li><li>Used color and image pacing to capture Rio's atmosphere.</li><li>Created a polished print piece for a travel-focused audience.</li></ul></div></section>
   <section class="project-detail-gallery"><div class="gallery-panel">Front</div><div class="gallery-panel">Inside</div><div class="gallery-panel">Map</div><div class="gallery-panel">Details</div></section>
   <section class="project-detail-nav"><button class="link-arrow" onclick="showPage('projects')">← Back to Projects</button><button class="link-arrow" onclick="showProjectDetail('project-prada')">Next Project →</button></section>
@@ -761,9 +815,32 @@ label,
     <p class="project-detail-intro">A high-fashion promotional system built around a custom typeface, poster redesign, and supporting campaign materials.</p>
   </section>
   <section class="project-detail-meta"><div class="meta-block"><p class="meta-label">Role</p><p class="meta-value">Typeface design, poster design, promotional system, art direction</p></div><div class="meta-block"><p class="meta-label">Tools</p><p class="meta-value">Illustrator · Photoshop</p></div><div class="meta-block"><p class="meta-label">Deliverables</p><p class="meta-value">Custom typeface · Poster · Ticket · Pamphlet · Paper bag</p></div></section>
-  <section class="project-detail-image dark"><span>DWP</span></section>
+  <section class="project-detail-image">
+  <img
+    class="project-detail-main-image"
+    src="Images/prada-mockup-main.png"
+    alt="The Devil Wears Prada Poster">
+</section>
   <section class="project-detail-body"><div><p class="eyebrow">Project Description</p><h2>Typography as fashion language.</h2></div><div><p>This project reimagines promotional materials for The Devil Wears Prada through the lens of luxury fashion branding. The custom typeface became the core visual device, giving the campaign a distinct editorial personality.</p><p>The system uses dramatic scale, sharp forms, and refined composition to create a tone that feels elegant, recognizable, and connected to the film's fashion world.</p><ul class="project-detail-list"><li>Developed a custom typeface inspired by high-fashion editorial references.</li><li>Created a cohesive set of promotional materials.</li><li>Used typography as the main driver of brand recognition.</li></ul></div></section>
-  <section class="project-detail-gallery"><div class="gallery-panel">Type</div><div class="gallery-panel">Poster</div><div class="gallery-panel">Ticket</div><div class="gallery-panel">Bag</div></section>
+  <section class="project-detail-gallery">
+
+  <div class="gallery-panel">
+    <img src="Images/prada-type.png" alt="Type">
+  </div>
+
+  <div class="gallery-panel">
+    <img src="Images/prada-flyer.png" alt="Flyer">
+  </div>
+
+  <div class="gallery-panel">
+    <img src="Images/prada-ticket.png" alt="Ticket">
+  </div>
+
+  <div class="gallery-panel">
+    <img src="Images/prada-bag.png" alt="Bag">
+  </div>
+
+</section>
   <section class="project-detail-nav"><button class="link-arrow" onclick="showPage('projects')">← Back to Projects</button><button class="link-arrow" onclick="showProjectDetail('project-brasilidade')">Next Project →</button></section>
   <footer><p>Giulia Guerini</p><p>© 2026 Giulia de Almada Guerini</p><p>Toronto, Canada</p></footer>
 </div>
