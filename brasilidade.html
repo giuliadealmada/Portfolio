@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Giulia Guerini — Graphic Designer</title>
+<title>Brasilidade Project — Giulia Guerini</title>
 
 <meta name="description" content="Giulia Guerini is a Graphic Designer based in Toronto specializing in editorial design, marketing design, branding, typography, and visual storytelling.">
 <meta name="keywords" content="Giulia Guerini, Giulia de Almada Guerini, graphic designer Toronto, editorial designer Toronto, marketing designer, Humber Polytechnic graphic design, branding designer, typography designer">
@@ -135,7 +135,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:50;height:74px;display:flex;alig
 .home-about-left{background:var(--ink);color:var(--paper);padding:clamp(72px,8vw,118px) clamp(24px,5vw,78px)}
 .home-about-title{font-family:'Playfair Display',serif;font-size:clamp(42px,5vw,78px);font-style:italic;font-weight:400;line-height:1.05;margin-bottom:28px;max-width:620px}
 .home-about-left p:not(.eyebrow){color:rgba(251,250,247,.68);max-width:560px;font-size:15px;line-height:1.95;margin-bottom:38px}
-.btn-outline{background:transparent;color:inherit;border:1px solid rgba(251,250,247,.45);padding:14px 28px;text-transform:uppercase;letter-spacing:.2em;font-size:11px;font-weight:700;text-decoration: none;}
+.btn-outline{background:transparent;color:inherit;border:1px solid rgba(251,250,247,.45);padding:14px 28px;text-transform:uppercase;letter-spacing:.2em;font-size:11px;font-weight:700}
 .home-about-right{background:var(--paper);padding:clamp(72px,8vw,118px) clamp(24px,5vw,78px);display:flex;align-items:center}
 .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:38px 48px;width:100%}
 .skill-label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--green);font-weight:700;margin-bottom:10px}
@@ -176,9 +176,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:50;height:74px;display:flex;alig
 }
 
 .project-card{
-  display:block;
-  text-decoration:none;
-  color:inherit;
   position:relative;
   min-height:410px;
   background:var(--cream);
@@ -565,7 +562,6 @@ label,
 
 </style>
 </head>
-
 <body>
 <div class="custom-cursor" aria-hidden="true"></div>
 
@@ -573,265 +569,85 @@ label,
   <a class="nav-logo" href="index.html">Giulia Guerini</a>
 
   <a href="index.html" aria-label="Go to homepage">
-    <img
-      class="nav-mark"
-      src="Images/logo-GiuliaGuerini.png"
-      alt="Giulia Guerini logo"
-    >
+    <img class="nav-mark" src="Images/logo-GiuliaGuerini.png" alt="Giulia Guerini logo">
   </a>
 
   <ul class="nav-links">
-    <li><a href="index.html" class="active" id="nav-home">Home</a></li>
+    <li><a href="index.html" id="nav-home">Home</a></li>
     <li><a href="about.html" id="nav-about">About</a></li>
-    <li><a href="projects.html" id="nav-projects">Projects</a></li>
+    <li><a href="projects.html" class="active" id="nav-projects">Projects</a></li>
     <li><a href="contact.html" id="nav-contact">Contact</a></li>
   </ul>
 </nav>
 
-<main id="home" class="page active">
-  <section class="hero">
-    <div class="hero-copy">
-      <p class="eyebrow">Graphic Designer · Toronto</p>
-
-      <h1 class="hero-title">
-        <em>Clean.</em>
-        <em>Modern.</em>
-        <em>Impossible</em>
-        <em>to Forget.</em>
-      </h1>
-
-      <p class="hero-name">Giulia Guerini</p>
-
-      <p class="hero-sub">
-        Combining strategy, typography, and visual storytelling to create impactful design across print and digital.
-      </p>
-
-      <a class="link-arrow" href="projects.html">View My Work →</a>
-    </div>
-
-    <div class="hero-portrait-wrap">
-      <img
-        class="hero-portrait"
-        src="Images/Giulia-portrait.JPG"
-        alt="Giulia Guerini portrait"
-      >
-    </div>
-  </section>
-
-  <section class="home-about">
-    <div class="home-about-left">
-      <p class="eyebrow" style="color:var(--rose)">About Me</p>
-
-      <h2 class="home-about-title">A designer shaped by two worlds.</h2>
-
-      <p>
-        Born in Brazil, based in Toronto — I bring the energy of two cultures into every project I touch.
-        Currently studying Graphic Design at Humber Polytechnic, I'm especially drawn to the places where
-        marketing and editorial design intersect.
-      </p>
-
-      <a class="btn-outline" href="about.html">Read More</a>
-    </div>
-
-    <div class="home-about-right">
-      <div class="skills-grid">
-        <div class="skill-item">
-          <p class="skill-label">Brand Identity</p>
-          <p>Visual systems that give brands a face worth remembering.</p>
-        </div>
-
-        <div class="skill-item">
-          <p class="skill-label">Editorial Design</p>
-          <p>Layouts that treat every page as a composition with intention.</p>
-        </div>
-
-        <div class="skill-item">
-          <p class="skill-label">Marketing Design</p>
-          <p>Campaigns built to connect — visually and emotionally.</p>
-        </div>
-
-        <div class="skill-item">
-          <p class="skill-label">Typography</p>
-          <p>Type as tone, structure, and personality — not just text.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="home-projects">
-    <div class="section-header">
-      <h2 class="section-title">Selected <em>Work</em></h2>
-      <a class="link-arrow" href="projects.html">All Projects →</a>
-    </div>
-
-    <div class="projects-grid">
-      <a class="project-card" href="texas-instruments.html">
-        <img
-          class="project-card-image"
-          src="Images/ti-mockup-main.jpeg"
-          alt="Texas Instruments poster mockup"
-        >
-
-        <div class="project-bottom-label">
-          <span class="project-number">01</span>
-          <span class="project-role-tag">Marketing</span>
-        </div>
-
-        <div class="project-overlay">
-          <p class="project-tag">Marketing Campaign</p>
-          <h3 class="project-name">Texas Instruments</h3>
-          <p class="project-desc">
-            Repositioning a legacy tech brand through creative campaign design for a music-learning app.
-          </p>
-        </div>
-      </a>
-
-      <a class="project-card" href="odc.html">
-        <img
-          class="project-card-image"
-          src="Images/odc-mockup-main.jpeg"
-          alt="Ottawa Design Club zine mockup"
-        >
-
-        <div class="project-bottom-label">
-          <span class="project-number">02</span>
-          <span class="project-role-tag">Editorial</span>
-        </div>
-
-        <div class="project-overlay">
-          <p class="project-tag">Editorial Design</p>
-          <h3 class="project-name">Ottawa Design Club</h3>
-          <p class="project-desc">
-            An editorial zine exploring Metamorphosis, built around Ottawa Design Club's visual identity.
-          </p>
-        </div>
-      </a>
-
-      <a class="project-card" href="prada.html">
-        <img
-          class="project-card-image"
-          src="Images/prada-mockup-main.jpeg"
-          alt="The Devil Wears Prada poster mockup"
-        >
-
-        <div class="project-bottom-label">
-          <span class="project-number">03</span>
-          <span class="project-role-tag">Type / Brand</span>
-        </div>
-
-        <div class="project-overlay">
-          <p class="project-tag">Type + Brand Design</p>
-          <h3 class="project-name">The Devil Wears Prada</h3>
-          <p class="project-desc">
-            A high-fashion promotional campaign with a custom typeface, poster redesign, and branded materials.
-          </p>
-        </div>
-      </a>
-
-      <a class="project-card" href="rio.html">
-        <img
-          class="project-card-image"
-          src="Images/rj-mockup-main.jpeg"
-          alt="Rio de Janeiro brochure mockup"
-        >
-
-        <div class="project-bottom-label">
-          <span class="project-number">04</span>
-          <span class="project-role-tag">Print</span>
-        </div>
-
-        <div class="project-overlay">
-          <p class="project-tag">Graphic / Editorial</p>
-          <h3 class="project-name">Rio de Janeiro Brochure</h3>
-          <p class="project-desc">
-            A vibrant, minimal trifold tourism brochure balancing Rio's energy with editorial restraint.
-          </p>
-        </div>
-      </a>
-
-      <a class="project-card" href="brasilidade.html">
-        <div class="project-img-bg">B</div>
-
-        <div class="project-bottom-label">
-          <span class="project-number">05</span>
-          <span class="project-role-tag">Coming Soon</span>
-        </div>
-
-        <div class="project-overlay">
-          <p class="project-tag">Branding · In Progress</p>
-          <h3 class="project-name">Brasilidade</h3>
-          <p class="project-desc">
-            A Brazilian-inspired curly hair care brand exploring cultural identity through packaging and campaign design.
-          </p>
-        </div>
-      </a>
-
-      <a class="project-card" href="timeless.html">
-        <div class="project-img-bg">T</div>
-
-        <div class="project-bottom-label">
-          <span class="project-number">06</span>
-          <span class="project-role-tag">Coming Soon</span>
-        </div>
-
-        <div class="project-overlay">
-          <p class="project-tag">Editorial Design · In Progress</p>
-          <h3 class="project-name">Timeless</h3>
-          <p class="project-desc">
-            A fashion-focused editorial zine exploring contemporary luxury, style, and visual storytelling.
-          </p>
-        </div>
-      </a>
-    </div>
-  </section>
-
-  <section class="home-contact section-pad">
+<main id="project-brasilidade" class="page project-detail-page active">
+  <section class="project-detail-hero">
     <div>
-      <p class="eyebrow" style="color:var(--rose)">Get In Touch</p>
-
-      <h2 class="home-contact-title">Let's make something unforgettable together.</h2>
-
-      <p>
-        Whether it's a campaign, an editorial concept, or a brand built from scratch —
-        I'd love to hear what you're working on.
-      </p>
-
-      <div class="contact-socials">
-        <a class="contact-social-link" href="mailto:design@giuliaguerini.com">design@giuliaguerini.com</a>
-        <a class="contact-social-link" href="https://www.behance.net/giuliaguerini" target="_blank">Behance</a>
-        <a class="contact-social-link" href="https://www.linkedin.com/in/giuliadealmada" target="_blank">LinkedIn</a>
-        <a class="contact-social-link" href="https://www.instagram.com/giuliadesignart" target="_blank">Instagram</a>
-      </div>
+      <p class="eyebrow">Brand Identity · In Progress</p>
+      <h1 class="project-detail-title">Brasilidade <em>Hair Care</em></h1>
     </div>
 
-    <form class="contact-form" action="https://formspree.io/f/mrevrojz" method="POST">
-      <div class="form-group">
-        <label class="form-label">Your Name</label>
-        <input class="form-input" type="text" name="name" placeholder="Full name" required>
-      </div>
+    <p class="project-detail-intro">
+      A Brazilian-inspired curly hair care brand exploring cultural identity, beauty, packaging, and campaign design.
+    </p>
+  </section>
 
-      <div class="form-group">
-        <label class="form-label">Email Address</label>
-        <input class="form-input" type="email" name="email" placeholder="hello@example.com" required>
-      </div>
+  <section class="project-detail-meta">
+    <div class="meta-block">
+      <p class="meta-label">Role</p>
+      <p class="meta-value">Brand strategy, identity design, packaging direction, campaign concept</p>
+    </div>
 
-      <div class="form-group">
-        <label class="form-label">Subject</label>
-        <input class="form-input" type="text" name="subject" placeholder="What's this about?" required>
-      </div>
+    <div class="meta-block">
+      <p class="meta-label">Tools</p>
+      <p class="meta-value">Illustrator · Photoshop · InDesign · Figma</p>
+    </div>
 
-      <div class="form-group">
-        <label class="form-label">What are you working on?</label>
-        <textarea
-          class="form-textarea"
-          name="message"
-          placeholder="Tell me about your project, timeline, and anything else that would help me understand what you need..."
-          required
-        ></textarea>
-      </div>
+    <div class="meta-block">
+      <p class="meta-label">Deliverables</p>
+      <p class="meta-value">Logo · Packaging · Brand guidelines · Website prototype · Social campaign</p>
+    </div>
+  </section>
 
-      <button type="submit" class="form-submit">Send Message →</button>
-    </form>
+  <section class="project-detail-image green">
+    <span>Brasil</span>
+  </section>
+
+  <section class="project-detail-body">
+    <div>
+      <p class="eyebrow">Project Description</p>
+      <h2>A brand rooted in Brazilian beauty and identity.</h2>
+    </div>
+
+    <div>
+      <p>
+        Brasilidade is being developed as a curly hair care brand inspired by Brazilian culture, ingredients, and aesthetics.
+        The project responds to the challenge of finding culturally resonant curly hair products in Canada.
+      </p>
+
+      <p>
+        The direction combines joyful tropical energy with a more premium editorial approach,
+        creating a brand that feels warm, expressive, and refined.
+      </p>
+
+      <ul class="project-detail-list">
+        <li>Building a full identity system with packaging and digital applications.</li>
+        <li>Exploring Brazilian visual references through a premium beauty lens.</li>
+        <li>Creating a campaign that celebrates curl diversity and cultural visibility.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="project-detail-gallery">
+    <div class="gallery-panel">Logo</div>
+    <div class="gallery-panel">Packaging</div>
+    <div class="gallery-panel">Social</div>
+    <div class="gallery-panel">Website</div>
+  </section>
+
+  <section class="project-detail-nav">
+    <a class="link-arrow" href="projects.html">← Back to Projects</a>
+    <a class="link-arrow" href="timeless.html">Next Project →</a>
   </section>
 </main>
 
@@ -886,7 +702,7 @@ if(customCursor && window.matchMedia('(pointer:fine)').matches){
     customCursor.classList.remove('is-visible');
   });
 
-  document.querySelectorAll('a, button, .project-card, .nav-mark, input, textarea').forEach((element) => {
+  document.querySelectorAll('a, button, .nav-mark, input, textarea').forEach((element) => {
     element.addEventListener('mouseenter', () => customCursor.classList.add('is-hovering'));
     element.addEventListener('mouseleave', () => customCursor.classList.remove('is-hovering'));
   });
