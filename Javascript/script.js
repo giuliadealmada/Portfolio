@@ -1,15 +1,16 @@
+// CUSTOM CURSOR
 const customCursor = document.querySelector('.custom-cursor');
 
-function getBackgroundLuminance(element){
+function getBackgroundLuminance(element) {
   let current = element;
 
-  while(current && current !== document.documentElement){
+  while (current && current !== document.documentElement) {
     const bg = window.getComputedStyle(current).backgroundColor;
 
-    if(bg && bg !== 'transparent' && bg !== 'rgba(0, 0, 0, 0)'){
+    if (bg && bg !== 'transparent' && bg !== 'rgba(0, 0, 0, 0)') {
       const values = bg.match(/\d+(\.\d+)?/g);
 
-      if(values && values.length >= 3){
+      if (values && values.length >= 3) {
         const r = Number(values[0]);
         const g = Number(values[1]);
         const b = Number(values[2]);
@@ -24,15 +25,18 @@ function getBackgroundLuminance(element){
   return 1;
 }
 
-if(customCursor && window.matchMedia('(pointer:fine)').matches){
+if (customCursor && window.matchMedia('(pointer:fine)').matches) {
   document.addEventListener('mousemove', (event) => {
     customCursor.classList.add('is-visible');
     customCursor.style.left = event.clientX + 'px';
     customCursor.style.top = event.clientY + 'px';
 
-    const elementUnderCursor = document.elementFromPoint(event.clientX, event.clientY);
+    const elementUnderCursor = document.elementFromPoint(
+      event.clientX,
+      event.clientY
+    );
 
-    if(elementUnderCursor){
+    if (elementUnderCursor) {
       const luminance = getBackgroundLuminance(elementUnderCursor);
       customCursor.classList.toggle('is-light', luminance < 0.35);
     }
@@ -42,8 +46,47 @@ if(customCursor && window.matchMedia('(pointer:fine)').matches){
     customCursor.classList.remove('is-visible');
   });
 
-  document.querySelectorAll('a, button, .project-card, .nav-mark, input, textarea').forEach((element) => {
-    element.addEventListener('mouseenter', () => customCursor.classList.add('is-hovering'));
-    element.addEventListener('mouseleave', () => customCursor.classList.remove('is-hovering'));
-  });
+  document
+    .querySelectorAll('a, button, .project-row, .project-card, .nav-mark, input, textarea')
+    .forEach((element) => {
+      element.addEventListener('mouseenter', () => {
+        customCursor.classList.add('is-hovering');
+      });
+
+      element.addEventListener('mouseleave', () => {
+        customCursor.classList.remove('is-hovering');
+      });
+    });
 }
+
+
+// PROJECT EXPAND / CLOSE
+function toggleProject(id) {
+  const selectedProject = document.getElementById(id);
+
+  if (!selectedProject) return;
+
+  const allProjects = document.querySelectorAll('.project-expanded');
+
+  allProjects.forEach((project) => {
+    if (project !== selectedProject) {
+      project.classList.remove('is-open');
+    }
+  });
+
+  selectedProject.classList.toggle('is-open');
+}
+
+
+// CLOSE BUTTONS
+document.querySelectorAll('.close-btn').forEach((button) => {
+  button.addEventListener('click', (event) => {
+    event.stopPropagation();
+
+    const expandedProject = button.closest('.project-expanded');
+
+    if (expandedProject) {
+      expandedProject.classList.remove('is-open');
+    }
+  });
+});
