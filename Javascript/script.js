@@ -90,3 +90,32 @@ document.querySelectorAll('.close-btn').forEach((button) => {
     }
   });
 });
+
+const filterButtons = document.querySelectorAll("[data-filter]");
+const projectCards = document.querySelectorAll(".archive-grid .project-card");
+const archiveGrid = document.querySelector(".archive-grid");
+
+if (archiveGrid) {
+  [...archiveGrid.children]
+    .sort(() => Math.random() - 0.5)
+    .forEach(card => archiveGrid.appendChild(card));
+}
+
+filterButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const filter = button.dataset.filter;
+
+    filterButtons.forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+
+    projectCards.forEach(card => {
+      const categories = card.dataset.category;
+
+      if (filter === "all" || categories.includes(filter)) {
+        card.classList.remove("is-hidden");
+      } else {
+        card.classList.add("is-hidden");
+      }
+    });
+  });
+});
