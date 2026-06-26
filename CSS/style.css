@@ -600,12 +600,35 @@ label,
 @media(max-width:980px){
   .archive-grid{
     grid-template-columns:1fr 1fr;
+      .hero-portrait-wrap,
+  .hero-carousel{
+    order:-1;
+    height:520px;
+    min-height:520px;
+  }
+
+  .hero-copy{
+    order:2;
+  }
+
+  .hero-carousel-image{
+    min-height:520px;
+  }
   }
 }
 
 @media(max-width:640px){
   .project-filters{
     gap:14px 18px;
+     .hero-portrait-wrap,
+  .hero-carousel{
+    height:420px;
+    min-height:420px;
+  }
+
+  .hero-carousel-image{
+    min-height:420px;
+  }
   }
 
   .project-filters button{
