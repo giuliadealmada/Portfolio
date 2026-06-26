@@ -598,9 +598,26 @@ label,
 }
 
 @media(max-width:980px){
-  .archive-grid{
-    grid-template-columns:1fr 1fr;
-      .hero-portrait-wrap,
+
+  nav{
+    height:auto;
+    min-height:68px;
+    gap:18px;
+    flex-wrap:wrap;
+    padding-top:18px;
+    padding-bottom:18px;
+  }
+
+  .nav-links{
+    gap:18px;
+    flex-wrap:wrap;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+    padding-top:96px;
+  }
+
   .hero-carousel{
     order:-1;
     height:520px;
@@ -609,26 +626,126 @@ label,
 
   .hero-copy{
     order:2;
+    border-right:0;
+    border-bottom:1px solid var(--line);
+    min-height:auto;
+    padding-top:80px;
+    padding-bottom:80px;
   }
 
   .hero-carousel-image{
     min-height:520px;
   }
+
+  .home-about,
+  .home-contact,
+  .about-body,
+  .contact-page-hero,
+  .contact-form-section{
+    grid-template-columns:1fr;
+  }
+
+  .about-body-left{
+    border-right:0;
+    border-bottom:1px solid var(--line);
+  }
+
+  .projects-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .project-card:nth-child(n){
+    grid-column:auto;
+  }
+
+  .skills-full-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .projects-page-hero{
+    display:block;
+  }
+
+  .projects-page-hero p{
+    margin-top:22px;
+  }
+
+  .project-row{
+    grid-template-columns:48px 1fr;
+    gap:20px;
+  }
+
+  .project-row-role,
+  .project-row-tools{
+    display:none;
+  }
+
+  .project-expanded.open,
+  .project-expanded.is-open{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+
+  .archive-grid{
+    grid-template-columns:1fr 1fr;
   }
 }
 
 @media(max-width:640px){
-  .project-filters{
-    gap:14px 18px;
-     .hero-portrait-wrap,
+
+  .nav-logo{
+    font-size:15px;
+  }
+
+  .nav-links a{
+    font-size:10px;
+  }
+
+  .hero-title{
+    font-size:58px;
+    line-height:.95;
+  }
+
+  .hero-title em{
+    font-size:.9em;
+    line-height:1.05;
+  }
+
+  .nav-mark{
+    height:36px;
+    position:absolute;
+    top:24px;
+    right:20px;
+    left:auto;
+    transform:none;
+  }
+
   .hero-carousel{
     height:420px;
     min-height:420px;
+    padding:0;
   }
 
   .hero-carousel-image{
     min-height:420px;
   }
+
+  .skills-grid,
+  .projects-grid,
+  .skills-full-grid{
+    grid-template-columns:1fr;
+  }
+
+  .section-header{
+    display:block;
+  }
+
+  .section-header .link-arrow{
+    margin-top:24px;
+  }
+
+  .project-filters{
+    gap:14px 18px;
   }
 
   .project-filters button{
@@ -637,6 +754,11 @@ label,
 
   .archive-grid{
     grid-template-columns:1fr;
+  }
+
+  footer{
+    flex-direction:column;
+    text-align:center;
   }
 }
 
