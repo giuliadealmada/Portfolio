@@ -119,3 +119,17 @@ filterButtons.forEach(button => {
     });
   });
 });
+
+const heroCarouselImages = document.querySelectorAll(".hero-carousel-image");
+
+let currentHeroImage = 0;
+
+if (heroCarouselImages.length > 1) {
+  setInterval(() => {
+    heroCarouselImages[currentHeroImage].classList.remove("active");
+
+    currentHeroImage = (currentHeroImage + 1) % heroCarouselImages.length;
+
+    heroCarouselImages[currentHeroImage].classList.add("active");
+  }, 3000);
+}
